@@ -1,0 +1,10 @@
+{
+  "name": "@omnibridge/react",
+  "version": "0.1.0",
+  "description": "The JavaScript side of omnibridge/react: render the page a server gives (component and props, from Symfony or Laravel alike) and follow the site's links without reloading.",
+  "type": "module",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "license": "MIT",
+  "peerDependencies": { "react": ">=18", "react-dom": ">=18" }
+}

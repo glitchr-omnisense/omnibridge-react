@@ -1,0 +1,11 @@
+{
+    "name": "omnibridge/react",
+    "description": "A page of a site as a React component and its props, the same from any framework: the first visit an HTML shell holding the page, a visit within the site the page in JSON (header X-Omnibridge), the JavaScript side rendering it and following the site's links without reloading.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [{ "name": "Marco Meyer" }],
+    "require": { "php": ">=8.2" },
+    "require-dev": { "phpunit/phpunit": "^11.5" },
+    "autoload": { "psr-4": { "Omnibridge\\React\\": "src/" } },
+    "autoload-dev": { "psr-4": { "Omnibridge\\React\\Tests\\": "tests/" } }
+}
