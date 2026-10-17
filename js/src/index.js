@@ -3,6 +3,7 @@
 // followed without reloading - the next page asked in JSON (X-Omnibridge),
 // the history kept, back and forward restoring the pages seen.
 import { createContext, createElement, useContext, useEffect, useState } from 'react';
+import { flushSync } from 'react-dom';
 import { createRoot } from 'react-dom/client';
 
 const PageContext = createContext(null);
@@ -103,5 +104,8 @@ export function createApp({ resolve, el = document.getElementById('app'), prefix
       visit(anchor.href);
     }
   });
-  createRoot(el).render(createElement(App, { initial }));
+  // Rendered at once, before the page's other deferred scripts run: a site's
+  // own behaviours (a drawer, a sticky header) find their elements in place.
+  const root = createRoot(el);
+  flushSync(() => root.render(createElement(App, { initial })));
 }
