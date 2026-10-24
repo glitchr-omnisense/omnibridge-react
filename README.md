@@ -16,6 +16,14 @@ renders it.
   the pages seen, `fetchPage()` asks a page without showing it (a feed's next
   batch), `usePage()` reads the page shown.
 
+The JavaScript is installed from this repository, as Composer installs the
+PHP: the package.json at its root is `@omnibridge/react` (its files under
+`js/src`), at a commit or a tag of the repository -
+
+```json
+"dependencies": { "@omnibridge/react": "github:glitchr-studio/omnibridge-react#<commit>" }
+```
+
 lesringostars uses it for its blog and its articles, given by its Symfony site
 and by its Laravel copy from the same screens (lesringostars-react).
 

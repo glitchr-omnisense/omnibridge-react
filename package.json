@@ -3,8 +3,19 @@
   "version": "0.1.0",
   "description": "The JavaScript side of omnibridge/react: render the page a server gives (component and props, from Symfony or Laravel alike) and follow the site's links without reloading.",
   "type": "module",
-  "main": "src/index.js",
-  "types": "src/index.d.ts",
+  "main": "js/src/index.js",
+  "types": "js/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./js/src/index.d.ts",
+      "default": "./js/src/index.js"
+    }
+  },
+  "files": ["js/src"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glitchr-studio/omnibridge-react.git"
+  },
   "license": "MIT",
   "peerDependencies": { "react": ">=18", "react-dom": ">=18" }
 }
