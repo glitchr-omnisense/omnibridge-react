@@ -11,6 +11,15 @@ Run on 2026-10-27 in `lesringostars-laravel-app` (PHP 8.4.27), the checkout's ow
 network: 3 tests, 11 assertions, green. The [Installation](installation.md) page's script was run in
 the same image that day and its output pasted.
 
+On 2026-11-13, for 1.0.0, in `ghcr.io/glitchr-studio/php:8.4` (PHP 8.4.27): the suite again, 3 tests,
+11 assertions, green. An empty Composer project with no stability setting, this checkout as a path
+repository presented as 1.0.0: `composer require omnibridge/react:^1.0` installs it alone, and the
+README's first use answers 200 (the shell), 200 (the JSON) and 409. `npm pack --dry-run` gives
+`@omnibridge/react` 1.0.0 (README, package.json, `js/src/index.js`, `js/src/index.d.ts`); that archive
+installed beside React 19 in an empty npm project, and Node.js imports `Link`, `createApp`,
+`fetchPage`, `usePage` and `visit` from it. Installing from `github:...#v1.0.0` needs the tag: not
+tried.
+
 ## Verified elsewhere
 
 - lesringostars' blog and articles through lesringostars-react, given by the Symfony site and by its

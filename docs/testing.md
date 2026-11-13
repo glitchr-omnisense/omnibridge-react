@@ -16,7 +16,7 @@ Laravel copy give the same pages to lesringostars-react.
 ## The package's suite
 
 ```sh
-docker run --rm -v "$PWD":/app -w /app lesringostars-laravel-app vendor/bin/phpunit tests
+docker run --rm -v "$PWD":/app -w /app ghcr.io/glitchr-studio/php:8.4 sh -c "composer update --no-progress && vendor/bin/phpunit tests"
 ```
 
 `ProtocolTest`: the first visit is the shell holding the page (the JSON in `data-page` decodes to the

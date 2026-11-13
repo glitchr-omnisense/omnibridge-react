@@ -18,14 +18,14 @@ PHP 8.2 or later; nothing else (no framework, no PSR interface).
 ```json
 {
   "dependencies": {
-    "@omnibridge/react": "github:glitchr-omnisense/omnibridge-react#<commit>",
+    "@omnibridge/react": "github:glitchr-omnisense/omnibridge-react#v1.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   }
 }
 ```
 
-`package.json` at the repository's root: `@omnibridge/react` 0.1.0, an ES module (`"type": "module"`),
+`package.json` at the repository's root: `@omnibridge/react` 1.0.0, the version of the tag, an ES module (`"type": "module"`),
 `main` and `exports` at `js/src/index.js`, the types at `js/src/index.d.ts`, the files `js/src` only.
 React and React DOM 18 or later are peer dependencies: the application installs them. No build step:
 the bundler of the application (webpack Encore, Vite...) takes the module as it is.
